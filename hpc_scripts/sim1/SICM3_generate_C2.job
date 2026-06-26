@@ -1,0 +1,13 @@
+### Simulation 1, Condition 2: Generate SICM data (3 misconceptions, high correlation r=0.8)
+### Submitted as a 1,000-job array on the University of Iowa Argon HPC cluster.
+### Each job generates one replication dataset, identified by $SGE_TASK_ID (1-1000).
+
+#!/bin/bash
+
+#$ -N SICM3_C2
+#$ -m bes
+#$ -cwd
+#$ -q all.q
+#$ -pe smp 1
+
+apptainer run ~/Templin-Stack-2025-01.sif Rscript SICM3_generate_Argon_C2.R $SGE_TASK_ID

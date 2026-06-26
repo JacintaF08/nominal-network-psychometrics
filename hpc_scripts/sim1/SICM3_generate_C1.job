@@ -1,0 +1,17 @@
+### Simulation 1, Condition 1: Generate SICM data (3 misconceptions, article correlation r~0.5)
+### Submitted as a 1,000-job array on the University of Iowa Argon HPC cluster.
+### Each job generates one replication dataset, identified by $SGE_TASK_ID (1-1000).
+
+#!/bin/bash
+
+##### Set Scheduler Configuration Directives #####
+
+#$ -N SICM3_C1
+#$ -m bes
+#$ -cwd
+#$ -q all.q
+#$ -pe smp 1
+
+##### End Scheduler Configuration Directives #####
+
+apptainer run ~/Templin-Stack-2025-01.sif Rscript SICM3_generate_Argon_C1.R $SGE_TASK_ID

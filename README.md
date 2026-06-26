@@ -1,4 +1,4 @@
-# Modeling Multiple-Choice Distractor Relationships Using Network Psychometrics
+# Nominal Network Psychometrics for Multiple-Choice Distractor Analysis
 
 This repository contains all code and simulation data for the paper:
 
@@ -58,6 +58,22 @@ nominal-network-psychometrics/
 │           ├── aggregate_results_sim2_C1.R
 │           ├── aggregate_results_sim2_C2.R
 │           └── aggregate_results_sim2_C3.R
+│
+├── argon_scripts/                             # Argon HPC job submission files
+│   ├── sim1/
+│   │   ├── SICM3_generate_C1.job
+│   │   ├── SICM3_generate_C2.job
+│   │   ├── SICM3_generate_C3.job
+│   │   ├── network3_estimate_C1.job
+│   │   ├── network3_estimate_C2.job
+│   │   └── network3_estimate_C3.job
+│   └── sim2/
+│       ├── SICM9_generate_C1.job
+│       ├── SICM9_generate_C2.job
+│       ├── SICM9_generate_C3.job
+│       ├── network9_estimate_C1.job
+│       ├── network9_estimate_C2.job
+│       └── network9_estimate_C3.job
 │
 ├── real_data/
 │   └── figures_and_realdata.R             # ACI network analysis + all paper figures
@@ -286,6 +302,8 @@ exclusion procedure, including which items and options were removed and why.
 - Items 21–30: B = mis 7, C = mis 8, D = mis 9
 - 1,000 examinees, 30 items, 4 options per item (A = correct)
 - 1,000 replications per condition
+- Note: 2 datasets were omitted from analysis (1 from C1, 1 from C2) due to
+  insufficient observations of a misconception pattern during 20-fold CV.
 
 ---
 
@@ -295,6 +313,8 @@ All scripts ending in `_Argon.R` were designed for the University of Iowa's
 Argon HPC cluster and accept a single integer command-line argument (the
 replication number, 1–1000). Each script was submitted as a 1,000-job array,
 with one job per replication per condition.
+
+
 
 ---
 

@@ -263,14 +263,8 @@ Each `.RData` file contains the following objects:
 
 ### Real data (Algebra Concept Inventory)
 
-The ACI data (`data/real/ACI_FormA_Spring2019.xlsx`) were collected by
-Wladis et al. (2018) from the City University of New York and are included
-here with permission. The dataset contains Form A responses from Spring 2019
-(N = 165 after exclusion of invalid forms; N = 143 after item-level exclusions
-required for 20-fold CV).
+The ACI data were collected by Wladis et al. (2018) from the City University of New York. Data are available upon request from Wladis et al. The dataset contains Form A responses from Spring 2019 (N = 165 after exclusion of invalid forms; N = 143 after item-level exclusions required for 20-fold CV).
 
-See `real_data/figures_and_realdata.R` for the full data cleaning and
-exclusion procedure, including which items and options were removed and why.
 
 ---
 
